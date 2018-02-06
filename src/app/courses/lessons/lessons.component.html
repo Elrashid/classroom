@@ -1,3 +1,11 @@
-<p>
-  lessons works!
-</p>
+<div *ngIf="lessons?.length > 0" class="panel panel-default">
+  <div class="panel-heading">الدرس</div>
+  <div class="panel-body">
+    <div class="list-group">
+      <a *ngFor="let lesson of lessons"  routerLinkActive="active"  routerLink="{{lesson.id}}/concepts" class="list-group-item">
+        {{lesson.name}}
+      </a>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

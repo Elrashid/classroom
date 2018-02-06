@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{concept.Course.name}} - {{concept.Lesson.name}} - {{concept.Concept.name}}</div>
+  <div class="panel-body">
+
+    <div *ngIf="concept.Media.youtube" class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" [src]="videoUrl" frameborder="0" allow="autoplay; 
+   encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- <div *ngIf="concept.Media.description">
+      <iframe align="right" class="embed-responsive-item" [src]="descriptionUrl" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+    <div *ngIf="concept.Media.notes">
+      <iframe align="right" class="embed-responsive-item" [src]="dangerousNoteUrl" frameborder="0" allowfullscreen>
+      </iframe>
+    </div> -->
+    <!-- <pre>{{concept | json}}</pre> -->
+
+  </div>
+</div>

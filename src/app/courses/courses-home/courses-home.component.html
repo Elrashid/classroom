@@ -1,3 +1,19 @@
-<p>
-  courses-home works!
-</p>
+<div *ngIf="courses?.length > 0" class="=row">
+  <div class="col-md-4">
+    <div class="panel panel-default" style="height: 100%">
+      <div class="panel-heading">الموضوع</div>
+      <div class="panel-body">
+        <div class="list-group">
+          <a *ngFor="let course of courses" routerLinkActive="active" routerLink="{{course.id}}/lessons" class="list-group-item">
+            {{course.name}}
+          </a>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+
+  </div>
+
+  <div *ngIf="coursesService.concept != null" class="col-md-8">
+    <app-concept-viewer></app-concept-viewer>
+  </div>
