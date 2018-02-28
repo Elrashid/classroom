@@ -21,7 +21,7 @@ export class ConceptViewerComponent implements OnInit {
   ngOnInit() {
     this.concept = this.coursesService.concept;
     if (this.concept.Media.youtube) {
-      var dangerousVideoUrl = "https://www.youtube.com/embed/" + this.concept.Media.youtube + "?rel=0";
+      var dangerousVideoUrl = "https://www.youtube.com/embed/" + this.concept.Media.youtube + "?rel=0&autoplay=1";
       this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(dangerousVideoUrl);
     }
     // if (this.concept.Media.description) {
